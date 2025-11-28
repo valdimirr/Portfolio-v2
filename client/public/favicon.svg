@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>  <!-- from-primary -->
+      <stop offset="100%" stop-color="#9333EA"/> <!-- to-purple-600 -->
+    </linearGradient>
+  </defs>
+
+  <!-- Background square -->
+  <rect width="64" height="64" rx="12" fill="url(#grad)" />
+
+  <!-- Letter V -->
+  <text
+    x="50%"
+    y="50%"
+    font-size="35"
+    font-family="Inter, sans-serif"
+    font-weight="700"
+    fill="white"
+    dominant-baseline="central"
+    text-anchor="middle"
+  >
+    V
+  </text>
+</svg>

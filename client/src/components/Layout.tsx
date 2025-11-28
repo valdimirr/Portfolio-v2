@@ -29,17 +29,30 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a 
-                key={item.href} 
+              <a
+                key={item.href}
                 href={item.href}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 {item.label}
               </a>
             ))}
-            <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20">
-              Contato
-            </Button>
+            <a
+              href="https://www.linkedin.com/in/valdimir-ferraz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              <Button
+                variant="default"
+                size="sm"
+                className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20"
+              >
+                Contato
+              </Button>
+            </a>
+
+
           </nav>
 
           {/* Mobile Nav */}
@@ -53,8 +66,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <SheetContent side="right" className="w-[300px] bg-background/95 backdrop-blur-xl border-l border-white/10">
                 <div className="flex flex-col gap-8 mt-8">
                   {navItems.map((item) => (
-                    <a 
-                      key={item.href} 
+                    <a
+                      key={item.href}
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
                       className="text-lg font-medium text-foreground hover:text-primary transition-colors"
@@ -82,19 +95,54 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <span className="font-display font-bold text-xl">Valdimir Ferraz Fogaça</span>
             <p className="text-muted-foreground text-sm">Programador Full Stack Junior</p>
           </div>
-          
+
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="rounded-full hover:bg-white/10 hover:text-primary">
-              <Github className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="rounded-full hover:bg-white/10 hover:text-primary">
-              <Linkedin className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="rounded-full hover:bg-white/10 hover:text-primary">
-              <Mail className="h-5 w-5" />
-            </Button>
+            {/* GitHub */}
+            <a
+              href="https://github.com/valdimirr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full hover:bg-white/10 hover:text-primary cursor-pointer"
+              >
+                <Github className="h-5 w-5" />
+              </Button>
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/valdimir-ferraz/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full hover:bg-white/10 hover:text-primary cursor-pointer"
+              >
+                <Linkedin className="h-5 w-5" />
+              </Button>
+            </a>
+
+            {/* Email */}
+            <a
+              href="mailto:valdimirferraz@hotmail.com?subject=Contato%20pelo%20Portf%C3%B3lio"
+              className="cursor-pointer"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full hover:bg-white/10 hover:text-primary cursor-pointer"
+              >
+                <Mail className="h-5 w-5" />
+              </Button>
+            </a>
           </div>
-          
+
+
           <div className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Todos os direitos reservados.
           </div>

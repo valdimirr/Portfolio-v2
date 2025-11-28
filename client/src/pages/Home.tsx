@@ -86,17 +86,17 @@ export default function Home() {
               </span>
               <span className="text-xs font-medium text-primary-foreground">Disponível para novos projetos</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold font-display leading-tight">
               Criando experiências <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">digitais imersivas</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">digitais robustas</span>
             </h1>
-            
+
             <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-              Olá, sou <strong className="text-foreground">Valdimir Ferraz Fogaça</strong>. 
-              Um desenvolvedor Full Stack JR apaixonado por construir interfaces modernas e sistemas robustos.
+              Olá, sou <strong className="text-foreground">Valdimir Ferraz Fogaça</strong>.
+              Um dev Full Stack JR apaixonado por construir interfaces modernas e sistemas completos.
             </p>
-            
+
             <div className="flex flex-wrap gap-4 mt-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25">
                 <a href="#projects">
@@ -105,14 +105,14 @@ export default function Home() {
                 </a>
               </Button>
               <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm">
-              <a href="/curriculo.pdf" download>
-                Baixar CV
-              </a>
-            </Button>
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm">
+                <a href="/curriculo.pdf" download>
+                  Baixar CV
+                </a>
+              </Button>
             </div>
           </div>
 
@@ -121,18 +121,18 @@ export default function Home() {
               {/* Decorative rings */}
               <div className="absolute inset-0 rounded-full border border-primary/20 animate-[spin_10s_linear_infinite]" />
               <div className="absolute inset-4 rounded-full border border-purple-500/20 animate-[spin_15s_linear_infinite_reverse]" />
-              
+
               {/* Avatar Container */}
               <div className="absolute inset-8 rounded-full overflow-hidden glass-panel p-2">
                 <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-purple-500/20">
-                  <img 
-                    src="/eu-toga.jpeg" 
-                    alt="Valdimir Ferraz Fogaça" 
+                  <img
+                    src="/eu-toga.jpeg"
+                    alt="Valdimir Ferraz Fogaça"
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                   />
                 </div>
               </div>
-              
+
               {/* Floating Tech Badges */}
               <div className="absolute -top-4 -right-4 p-3 glass-panel rounded-2xl animate-bounce delay-700">
                 <Code2 className="h-6 w-6 text-primary" />
@@ -205,7 +205,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          
+
           <div>
             <Timeline items={journey} />
           </div>
@@ -220,9 +220,15 @@ export default function Home() {
           <p className="text-muted-foreground max-w-2xl mx-auto mb-10 text-lg">
             Estou sempre aberto a novas oportunidades e parcerias. Se você tem um projeto em mente ou quer apenas trocar uma ideia sobre tecnologia, entre em contato.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 h-12 rounded-full shadow-xl shadow-primary/20 hover:scale-105 transition-transform">
-            <Mail className="mr-2 h-5 w-5" /> Entrar em Contato
-          </Button>
+          <a href="mailto:valdimirferraz@hotmail.com">
+            <Button
+              size="lg"
+              className=" cursor-pointer bg-primary hover:bg-primary/90 text-white px-8 h-12 rounded-full shadow-xl shadow-primary/20 hover:scale-105 transition-transform"
+            >
+              <Mail className="mr-2 h-5 w-5" /> Entrar em Contato
+            </Button>
+          </a>
+
         </div>
       </section>
     </Layout>
